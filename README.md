@@ -29,17 +29,23 @@ The initial model achieved an accuracy of 0.735 and loss of 0.5617
 
 ### Optimisation
 
-An iterative approach was used to tune the model across the following hyperparameters:
+A 3x3x3x3 grid search approach was used to evaluate the model across the following hyperparameters:
 
-learning rates: `0.001, 0.01, 0.01`
+learning rates: `0.001, 0.01, 0.1`
 
 batch sizes: `32, 64, 128`
 
-layer architectures (number of units per layer): `(32, 16), (64, 32), (128, 64)`
+layer architectures (number of units per layer): `(64, 32), (128, 64), (256, 128)`
 
 activation functions: `'relu', 'tanh', 'sigmoid'`
 
-Testing all permutations required generating models across 3^4, or 81 permutations, which was achieved via nesting loops across each list of parameter settings. A 5-fold cross-validation approach was also implemented in this search. Due to the length of this process, an early stopping function was implemented. This meant that even though 100 epochs were specified, training would stop if 10 epochs passed without improvement to the loss.
+The significantly increased number of units per layers is moderated somewhat by the inclusion of a 50% dropout.
+
+Testing all permutations required generating models across 3^4, or 81 permutations, which was achieved via nesting loops across each list of parameter settings. A 4-fold cross-validation approach was also implemented in this search. Due to the length of this process, an early stopping function was implemented. This meant that even though 100 epochs were specified, training would stop if 10 epochs passed without improvement to the accuracy.
+
+The legacy Adam optimiser was chosen due to better performance on ARM64 processors.
+
+
 
 ```
 Iteration 1/81: Learning Rate = 0.001, Batch Size = 32, Layer Config = (32, 16), Activation = relu
@@ -54,9 +60,13 @@ Iteration 9/81: Learning Rate = 0.001, Batch Size = 32, Layer Config = (128, 64)
 ```
 
 
-### Result of tuning
+## Result of tuning
 
-The 
+(pending overnight run)
+
+
+## Summary
+
 
 
 ### Disclaimer
