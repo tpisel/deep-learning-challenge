@@ -64,6 +64,9 @@ Iteration 9/81: Learning Rate = 0.001, Batch Size = 32, Layer Config = (128, 64)
 
 (pending overnight run)
 
+Best Hyperparameters: {'learning_rate': 0.01, 'batch_size': 128, 'layer_config': (64, 32), 'activation_func': 'sigmoid'}
+Best Validation Accuracy: 0.7317123860120773
+
 
 ## Summary
 
