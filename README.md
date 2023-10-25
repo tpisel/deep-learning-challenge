@@ -62,13 +62,46 @@ Iteration 9/81: Learning Rate = 0.001, Batch Size = 32, Layer Config = (128, 64)
 
 ## Result of tuning
 
-(pending overnight run)
 
-Best Hyperparameters: {'learning_rate': 0.01, 'batch_size': 128, 'layer_config': (64, 32), 'activation_func': 'sigmoid'}
-Best Validation Accuracy: 0.7317123860120773
+```
+Best Hyperparameters
+    {
+        'learning_rate': 0.01, 
+        'batch_size': 128, 
+        'layer_config': (64, 32), 
+        'activation_func': 'sigmoid'
+    }
 
 
-## Summary
+Best Validation Accuracy
+    0.7317123860120773
+
+
+Best Hyperparameters
+    {
+        'learning_rate': 0.001, 
+        'batch_size': 32, 
+        'layer_config': (64, 32), 
+        'activation_func': 
+        'relu'
+    }
+
+Best Validation Accuracy
+    0.7324412167072296
+
+
+Best Hyperparameters:
+    {
+        'learning_rate': 0.002,
+         'batch_size': 30,
+         'layer_config': (16, 16),
+         'activation_func': 'swish'
+    }
+
+Best Validation Accuracy:
+    0.7318290024995804
+
+```
 
 
 
